@@ -1,0 +1,46 @@
+site_name: 
+  Leo叔叔的杂货铺
+theme:
+  name: material
+  custom_dir: overrides
+  language: zh
+  icon:
+    logo: material/file-document
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: light blue
+      toggle:
+        icon: material/brightness-4
+        name: dark mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      toggle:
+        icon: material/brightness-7
+        name: light mode
+
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation
+    - navigation.top
+nav:
+  - 首页: index.md
+  - 工具: src/ai/A.深度学习入门介绍.md
+  - Ai: src/ai/D.Transformer结构.md
+  - 软考:
+    - 项目的整合管理: src/01项目整合管理.md
+    - 项目的范围管理: src/02项目范围管理.md
+    - 项目的进度管理: src/03项目进度管理.md
+    - 项目的成本管理: src/04项目成本管理.md
+    - 项目的质量管理: src/05项目质量管理.md
+    - 项目的资源管理: src/06项目资源管理.md
+    - 项目的沟通管理: src/07项目沟通管理.md
+    - 项目的风险管理: src/08项目风险管理.md
+    - 项目的采购管理: src/09项目采购管理.md
+    - 项目的干系人管理: src/10项目干系人管理.md
+
+plugins:
+  - glightbox
+  - search
