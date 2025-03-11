@@ -6,17 +6,27 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="知足且上进，温柔且坚定">
       
       
+        <meta name="author" content="乐小文(Leo)">
       
       
+        <link rel="canonical" href="https://lexiaowenn.github.io/groceryStore/src/ai/N.%E9%87%8F%E5%8C%96%E6%8A%80%E6%9C%AF%E8%A7%A3%E6%9E%90/">
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      
+        <link rel="prev" href="../M.%E4%BA%BA%E7%B1%BB%E5%81%8F%E5%A5%BD%E5%AF%B9%E9%BD%90%E8%AE%AD%E7%BB%83/">
+      
+      
+        <link rel="next" href="../O.Modelscope-Agent_%20AgentFabric%E5%BE%AE%E8%B0%83%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">
+      
+      
+      <link rel="icon" href="https://s2.loli.net/2024/04/26/PmRdM9iGnvOJHgu.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
-        <title>N.量化技术解析 - Leo叔叔的杂货铺</title>
+        <title>量化技术解析 - Leo叔叔的杂货铺</title>
       
     
     
@@ -42,6 +52,14 @@
       
     
     
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/link.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/customize.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -49,16 +67,7 @@
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  </head>
   
   
     
@@ -68,7 +77,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,7 +103,12 @@
     <a href="../../.." title="Leo叔叔的杂货铺" class="md-header__button md-logo" aria-label="Leo叔叔的杂货铺" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5zM6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m9 16v-2H6v2zm3-4v-2H6v2z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              N.量化技术解析
+              量化技术解析
             
           </span>
         </div>
@@ -124,20 +138,30 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="indigo"  aria-label="dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="关闭自动模式"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      <label class="md-header__button md-icon" title="关闭自动模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="indigo"  aria-label="light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
       </label>
     
   
@@ -147,6 +171,32 @@
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/Mkdocs-Wcowin/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
     
     
       <label class="md-header__button md-icon" for="__search">
@@ -166,11 +216,18 @@
       </label>
       <nav class="md-search__options" aria-label="查找">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -221,34 +278,22 @@
         
   
   
-  
-    <li class="md-tabs__item">
-      <a href="../A.%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/" class="md-tabs__link">
-        
-  
     
   
-  工具
-
-      </a>
-    </li>
   
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../D.Transformer%E7%BB%93%E6%9E%84/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../A.%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/" class="md-tabs__link">
+          
   
     
   
   Ai
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -262,11 +307,124 @@
         <a href="../../01%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86/" class="md-tabs__link">
           
   
+    
+  
   软考
 
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tag.md" class="md-tabs__link">
+        
+  
+    
+  
+  标签
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../liuyanban.md" class="md-tabs__link">
+        
+  
+    
+  
+  留言板
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blogger
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../about/link.md" class="md-tabs__link">
+          
+  
+    
+  
+  友链
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../about/geren.md" class="md-tabs__link">
+          
+  
+    
+  
+  关于
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://wcowin.work" class="md-tabs__link">
+        
+  
+    
+  
+  个人博客
+
+      </a>
+    </li>
   
 
       
@@ -295,7 +453,12 @@
     <a href="../../.." title="Leo叔叔的杂货铺" class="md-nav__button md-logo" aria-label="Leo叔叔的杂货铺" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5zM6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m9 16v-2H6v2zm3-4v-2H6v2z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
 
     </a>
     Leo叔叔的杂货铺
@@ -328,6 +491,90 @@
       
   
   
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Ai
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ai
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
@@ -335,7 +582,7 @@
         
   
   <span class="md-ellipsis">
-    工具
+    深度学习入门介绍
     
   </span>
   
@@ -344,9 +591,54 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../B.%E9%AD%94%E6%90%AD%E7%A4%BE%E5%8C%BA%E5%92%8CLLM%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    魔搭社区和LLM大模型基础知识
     
-      
-      
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C.%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B-prompt%20engineering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    提示词工程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
   
@@ -356,12 +648,461 @@
         
   
   <span class="md-ellipsis">
-    Ai
+    Transformer结构
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E.%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    技术选型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../F.%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据预处理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../G.%E9%87%8F%E5%8C%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    量化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../H.%E8%AE%AD%E7%BB%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    训练
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../I.LLM%E5%92%8C%E5%A4%9A%E6%A8%A1%E6%80%81%E6%A8%A1%E5%9E%8B%E9%AB%98%E6%95%88%E6%8E%A8%E7%90%86%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM和多模态模型高效推理实践
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../J.%E9%83%A8%E7%BD%B2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    部署
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../K.%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%87%AA%E5%8A%A8%E8%AF%84%E4%BC%B0%E7%90%86%E8%AE%BA%E5%92%8C%E5%AE%9E%E6%88%98--LLM%20Automatic%20Evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    大模型自动评估理论和实战
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L.LISA%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E8%A7%A3%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LISA微调技术解析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../M.%E4%BA%BA%E7%B1%BB%E5%81%8F%E5%A5%BD%E5%AF%B9%E9%BD%90%E8%AE%AD%E7%BB%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    人类偏好对齐训练
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    量化技术解析
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    量化技术解析
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      量化的定义和基本原理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      原理篇
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="原理篇">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bnb" class="md-nav__link">
+    <span class="md-ellipsis">
+      BnB量化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gptq" class="md-nav__link">
+    <span class="md-ellipsis">
+      GPTQ量化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awq" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWQ量化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hqq" class="md-nav__link">
+    <span class="md-ellipsis">
+      HQQ量化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      小小的总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qlora" class="md-nav__link">
+    <span class="md-ellipsis">
+      QLoRA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../O.Modelscope-Agent_%20AgentFabric%E5%BE%AE%E8%B0%83%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AgentFabric微调最佳实践
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P.PlayGround_%E8%AE%AD%E7%BB%83%E4%B8%80%E4%B8%AA%E5%8F%A4%E6%96%87%E7%BF%BB%E8%AF%91%E8%85%94%E6%9C%BA%E5%99%A8%E4%BA%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    训练一个古文翻译腔机器人
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Q.%E4%BB%8E%20OpenAI-O1%20%E7%9C%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%A4%8D%E6%9D%82%E6%8E%A8%E7%90%86%E8%83%BD%E5%8A%9B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    看大模型的复杂推理能力
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../R.10%E5%88%86%E9%92%9F%E6%94%B9%E5%8F%98%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.ipynb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10分钟改变大模型自我认知
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -374,8 +1115,32 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
       
+      
+        
       
     
     
@@ -383,10 +1148,12 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -398,8 +1165,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             软考
           </label>
@@ -632,6 +1399,335 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tag.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    标签
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../liuyanban.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    留言板
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blogger
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Blogger
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    归档
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    友链
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            友链
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/link.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    友链
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    关于
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            关于
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/geren.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    作者个人简介
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/test.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    功能测试
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://wcowin.work" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    个人博客
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -767,22 +1863,38 @@
                   
 
 
+  
+    <a href="edit/main/docs/src/ai/N.量化技术解析.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="raw/main/docs/src/ai/N.量化技术解析.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
 
-  <h1>N.量化技术解析</h1>
 
-<h2 id="_1"><strong>量化的定义和基本原理</strong></h2>
+  <h1>量化技术解析</h1>
+
+<h2 id="_1"><strong>量化的定义和基本原理</strong><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><strong>量化是将模型浮点数变为定点数运行的过程。</strong></p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde5d2227bf8b4577a9753cb521cdd22f44f58e70b814913bc360a414d3de9277d871abf3af1cbd75249008cf07188e14381ac1e99050a5379a98ac579c6c1f81d6b7942bb930afe62fa034330c05d3fbe5efc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde5d2227bf8b4577a9753cb521cdd22f44f58e70b814913bc360a414d3de9277d871abf3af1cbd75249008cf07188e14381ac1e99050a5379a98ac579c6c1f81d6b7942bb930afe62fa034330c05d3fbe5efc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde5d2227bf8b4577a9753cb521cdd22f44f58e70b814913bc360a414d3de9277d871abf3af1cbd75249008cf07188e14381ac1e99050a5379a98ac579c6c1f81d6b7942bb930afe62fa034330c05d3fbe5efc653b69905bac42.png" /></p>
 <p>浮点数计算机存储方式示意图</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde5d2227bf8b4577a9753cb521cdd22f44f58e70b814913bc360a414d3de9277d871abf3af1cbd75249d2aa68d2ffabe662384e50cfef88373fc955f46a4cd28945577b0146f3954a159c2adb17fe123fa9fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde5d2227bf8b4577a9753cb521cdd22f44f58e70b814913bc360a414d3de9277d871abf3af1cbd75249d2aa68d2ffabe662384e50cfef88373fc955f46a4cd28945577b0146f3954a159c2adb17fe123fa9fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde5d2227bf8b4577a9753cb521cdd22f44f58e70b814913bc360a414d3de9277d871abf3af1cbd75249d2aa68d2ffabe662384e50cfef88373fc955f46a4cd28945577b0146f3954a159c2adb17fe123fa9fc653b69905bac42.png" /></p>
 <p>翻译成人话就是将用小数计算结果的模型，转换成用整数计算，中间自然有精度损失（因为小数位没了，而且浮点数翻译成整形再转回来是有损压缩过程）。</p>
 <p>有了这个定义，我们就可以继续下面要讲的部分。在继续下面的内容之前，还是建议大家把上面的模型量化基础读一遍。下面会基于之前的文章，侧重几个方面进行技术分析：</p>
 <ul>
 <li>BnB/HQQ/AWQ/GPTQ等几种量化方法的原理</li>
 <li>这几种量化方法一般怎么使用</li>
 </ul>
-<h2 id="_2"><strong>原理篇</strong></h2>
-<h3 id="bnb"><strong>BnB量化</strong></h3>
+<h2 id="_2"><strong>原理篇</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="bnb"><strong>BnB量化</strong><a class="headerlink" href="#bnb" title="Permanent link">&para;</a></h3>
 <p>BnB全称是BitsAndBytes，是几乎最早集成到transformers框架中的量化算法。</p>
 <p>论文地址：</p>
 <p>LLM.int8():https://arxiv.org/pdf/2208.07339</p>
@@ -793,7 +1905,7 @@
 <li>按照浮点数和整数的范围比例，对浮点数进行缩放</li>
 <li>在forward时，将hidden_states按1-2步骤进行缩放，或者将weights反量化为浮点数进行计算</li>
 </ol>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249f9242cbfe9d20f8ccc94ac51c7790964471654c079bc7162e1f2d4c8e19fc0a6e449e11e32c81272fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249f9242cbfe9d20f8ccc94ac51c7790964471654c079bc7162e1f2d4c8e19fc0a6e449e11e32c81272fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249f9242cbfe9d20f8ccc94ac51c7790964471654c079bc7162e1f2d4c8e19fc0a6e449e11e32c81272fc653b69905bac42.png" /></p>
 <p><strong>absmax量化</strong></p>
 <p>bitsandbytes.LLM.int8()算法也是基于上面的思路的，特殊之处在于，在分析weights矩阵的稀疏性质后，总结了下面的特性：</p>
 <ol>
@@ -806,22 +1918,29 @@
 <li>对离群值以低精度浮点型进行矩阵乘法，对非离群值以int8进行矩阵乘法</li>
 <li>对非离群值的结果反量化，将两部分加起来得到最终结果</li>
 </ol>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752491fa32347e62c08ce0370cdc6acb6c59344d5971f94e15bb19c6172e59ae7222a100830a22d495d02fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752491fa32347e62c08ce0370cdc6acb6c59344d5971f94e15bb19c6172e59ae7222a100830a22d495d02fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752491fa32347e62c08ce0370cdc6acb6c59344d5971f94e15bb19c6172e59ae7222a100830a22d495d02fc653b69905bac42.png" /></p>
 <p><strong>离群值/非离群值量化</strong></p>
 <p>在实际实验中，BnB算法发现以6为尺度分割出离群值是最佳的。</p>
 <p>在transformers中使用BnB算法比较简单：</p>
-<pre><code>from transformers import BitsAndBytesConfig, AutoModelForCausalLM
-
-
-bnb_config = BitsAndBytesConfig(
-   load_in_8bit=True,
-)
-
-model = AutoModelForCausalLM.from_pretrained(some-model-id, quantization_config=bnb_config)
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>from transformers import BitsAndBytesConfig, AutoModelForCausalLM
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>bnb_config = BitsAndBytesConfig(
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>   load_in_8bit=True,
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>)
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>model = AutoModelForCausalLM.from_pretrained(some-model-id, quantization_config=bnb_config)
+</code></pre></div></td></tr></table></div>
 <p>由于BnB量化不需要任何校准数据集，因此其量化速度很快，这也是为什么在QLoRA训练时，会直接传入BitsAndBytesConfig直接对原始模型量化后训练。</p>
 <p>而在QLoRA论文中，作者介绍了4bit量化、双重量化和分页optimizer的技术方案。</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249fbafa8cfc5d986247559f3b571453844d0902cbb85d45c35ac370cafcda1bcadd0aaffbb69a1b46afc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249fbafa8cfc5d986247559f3b571453844d0902cbb85d45c35ac370cafcda1bcadd0aaffbb69a1b46afc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249fbafa8cfc5d986247559f3b571453844d0902cbb85d45c35ac370cafcda1bcadd0aaffbb69a1b46afc653b69905bac42.png" /></p>
 <p><strong>4bit量化</strong>支持两种数据类型：fp4和nf4。fp4是四bit浮点数，包含一位符号位，两位整数位和一位小数位。nf4全称是4-bit NormalFloat，和fp4类似，但是其数值分布并不均匀，呈现正态分布。这是因为一般LLM的矩阵参数概率密度也是呈现正态分布的。在4bit量化中，也更推荐使用nf4数据类型，因为可以比较好的契合参数特性。</p>
 <p>nf4的量化思路可以理解为：一般模型weights是均值为0，标准差为σ的的分布，因此该分布可以转换为标准高斯分布。这样可以从标准高斯分布中取样一定分位数的量化间隔并设定量化值（该值采用两边分位数的均值），并且正则化到[-1, 1]区间中。后续就可以将模型weights通过absmax量化到该区间中。</p>
 <p><strong>双重量化</strong>指的是针对量化常数的二次量化。由于BnB的量化是块量化（block-wise），因此块级别的常数存储也会占用GPU memory。对此，在一次量化后针对此类常数进行二次量化，进一步压缩显存空间。</p>
@@ -832,24 +1951,24 @@ $$
 $$
 \text{doubleDequant}(c_1^{\text{FP32}}, c_2^{k\text{-bit}}, \mathbf{W}^{k\text{-bit}}) = \text{dequant}(\text{dequant}(c_1^{\text{FP32}}, c_2^{k\text{-bit}}), \mathbf{W}^{4\text{bit}}) = \mathbf{W}^{\text{BF16}}
 $$
-​     <strong>QLoRA双重反量化：</strong>c_1<strong>是块级别常数的量化常数，</strong>c_2<strong>是原</strong>{W}^{\text{BF16}}<strong>的量化常数</strong> L_1<strong>、</strong>L_2<strong>分别是LoRA的两个矩阵</strong></p>
+​     <strong>QLoRA双重反量化：</strong>c_1<strong>是块级别常数的量化常数，</strong>c_2<strong W="W">是原</strong>}^{\text{BF16}<strong>的量化常数</strong> L_1<strong>、</strong>L_2<strong>分别是LoRA的两个矩阵</strong></p>
 <p><strong>optimizer分页</strong>可以同比理解为CPU的分页内存概念，防止在长文本时出现的显存爆炸。</p>
 <p>下面我们放一点代码帮助理解。</p>
 <p>在transformers.intergrations.bitsandbytes.py中：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd7524942cbce54abbd79d6d84215a01198e7d1dfb7ec9e76a5a6c720e6adedb9a3c0cdce0e369aaac14ce2fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd7524942cbce54abbd79d6d84215a01198e7d1dfb7ec9e76a5a6c720e6adedb9a3c0cdce0e369aaac14ce2fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd7524942cbce54abbd79d6d84215a01198e7d1dfb7ec9e76a5a6c720e6adedb9a3c0cdce0e369aaac14ce2fc653b69905bac42.png" /></p>
 <p>这里是替换Linear和Conv算子为bnb的起始点。</p>
 <p>bitsandbytes.nn.modules.py:</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249487927a8a282c573c69072b1e159b94ba77fa57d13daa86b0747e3539c9fb45c1b334a81d683a1acfc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249487927a8a282c573c69072b1e159b94ba77fa57d13daa86b0747e3539c9fb45c1b334a81d683a1acfc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249487927a8a282c573c69072b1e159b94ba77fa57d13daa86b0747e3539c9fb45c1b334a81d683a1acfc653b69905bac42.png" /></p>
 <p>双重量化。可以看到在weights迁移到cuda的时机进行量化。</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752495a70bea9cd0082c27f879f6ea76f481af018b481193bcb10db4b065c57c5dfcf2390036e0d1a30eefc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752495a70bea9cd0082c27f879f6ea76f481af018b481193bcb10db4b065c57c5dfcf2390036e0d1a30eefc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752495a70bea9cd0082c27f879f6ea76f481af018b481193bcb10db4b065c57c5dfcf2390036e0d1a30eefc653b69905bac42.png" /></p>
 <p>继续到C代码bitsandbytes.csrc.kernels.cu：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752492cb8a12d6644a70f8a9763813bbc5aee988361c722588712a4431e6b338965fefc5d279933be7109fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752492cb8a12d6644a70f8a9763813bbc5aee988361c722588712a4431e6b338965fefc5d279933be7109fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752492cb8a12d6644a70f8a9763813bbc5aee988361c722588712a4431e6b338965fefc5d279933be7109fc653b69905bac42.png" /></p>
 <p>可以看到针对离群点进行了阈值判断并有选择地量化。如果大于离群阈值则直接置0。</p>
 <p>4bit量化：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249862aa785750e95bb876e95efb0cc48f8116a6b2b7f79d97ccc10ba54d6d05a7efcf4f65c266a3c41fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249862aa785750e95bb876e95efb0cc48f8116a6b2b7f79d97ccc10ba54d6d05a7efcf4f65c266a3c41fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249862aa785750e95bb876e95efb0cc48f8116a6b2b7f79d97ccc10ba54d6d05a7efcf4f65c266a3c41fc653b69905bac42.png" /></p>
 <p>可以看到量化后针对偶数index的参数左移四位，和相邻参数构成了一个完整的byte。</p>
 <p>使用QLoRA进行训练请参考下个章节。</p>
-<h3 id="gptq"><strong>GPTQ量化</strong></h3>
+<h3 id="gptq"><strong>GPTQ量化</strong><a class="headerlink" href="#gptq" title="Permanent link">&para;</a></h3>
 <p>说到GPTQ，就要说起它的老祖先OBD、OBS、OBC等剪枝算法（否则无法理解GPTQ）。本质上来说，参数剪枝是参数量化的一种特殊情况（把参数直接置为0这个特殊量化值）。</p>
 <p>先说OBD。</p>
 <p>论文：https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=17c0a7de3c17d31f79589d245852b57d083d386e</p>
@@ -877,33 +1996,33 @@ $$
 $$
 在具有约束条件的情况下，引入松弛变量构建拉格朗日函数：</p>
 <p>$$
-L = \frac{1}{2} \delta \mathbf{w}^T \cdot \mathbf{H} \cdot \delta \mathbf{w} + \lambda \left( \mathbf{e}<em>q^T \cdot \delta \mathbf{w} + w_q \right)
+L = \frac{1}{2} \delta \mathbf{w}^T \cdot \mathbf{H} \cdot \delta \mathbf{w} + \lambda \left( \mathbf{e}<em qq="qq">q^T \cdot \delta \mathbf{w} + w_q \right)
 $$
 对\delta w 求导并令其为0，求解后可得：
 $$
-\delta \mathbf{w} = -\frac{w_q}{[\mathbf{H}^{-1}]</em>{qq}} \mathbf{H}^{-1} \cdot \mathbf{e}<em>q \quad \text{and} \quad L_q = \frac{1}{2} \frac{w_q^2}{[\mathbf{H}^{-1}]</em>{qq}}
+\delta \mathbf{w} = -\frac{w_q}{[\mathbf{H}^{-1}]</em>}} \mathbf{H}^{-1} \cdot \mathbf{e<em qq="qq">q \quad \text{and} \quad L_q = \frac{1}{2} \frac{w_q<sup -1="-1">2}{[\mathbf{H}</sup>]</em>
 $$
-L_q部分就是模型参数对Loss的重要性评估公式。</p>
+L_q部分就是模型参数对Loss的重要性评估公式。}</p>
 <p>然后说OBC。</p>
 <p>论文：https://openreview.net/pdf?id=ksVGCOlOEba</p>
 <p>OBC基于OBS的结论，做了下面的两个假设：</p>
 <ol>
 <li>假设了Loss的形式是：</li>
 </ol>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249ea49fc1506e08669046d2e43546870c222f5de43ef1b43803fc8a930caf5a7512f5c78efce79a809fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249ea49fc1506e08669046d2e43546870c222f5de43ef1b43803fc8a930caf5a7512f5c78efce79a809fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249ea49fc1506e08669046d2e43546870c222f5de43ef1b43803fc8a930caf5a7512f5c78efce79a809fc653b69905bac42.png" /></p>
 <p>即为剪枝后的激活值和剪枝前激活值的MSE loss。</p>
 <ol>
 <li>每个权重的行独立影响激活值的行</li>
 </ol>
-<p>第一个假设可以把海森矩阵简化为H=2XX^T，第二个假设可以单独的处理每行的剪枝，并只使用col*col大小的海森矩阵。由于H和W无关，因此H全局计算一次即可。而H-1在重要度估计和参数更新时比较重要，因此在剪枝某个参数后H的对应行列会被删除，因此仅需要使用Gauss-Jordan消元法重新计算逆矩阵即可。最终推导的H^{-1}计算公式为：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249a5a047f57415921765eb6d9a889941b23ce54a6792a6a61fd5caf3d5080cde537157ab170adec9a6fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249a5a047f57415921765eb6d9a889941b23ce54a6792a6a61fd5caf3d5080cde537157ab170adec9a6fc653b69905bac42.png" /></a></p>
+<p>第一个假设可以把海森矩阵简化为H=2XX<sup -1="-1">T，第二个假设可以单独的处理每行的剪枝，并只使用col*col大小的海森矩阵。由于H和W无关，因此H全局计算一次即可。而H-1在重要度估计和参数更新时比较重要，因此在剪枝某个参数后H的对应行列会被删除，因此仅需要使用Gauss-Jordan消元法重新计算逆矩阵即可。最终推导的H</sup>计算公式为：</p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249a5a047f57415921765eb6d9a889941b23ce54a6792a6a61fd5caf3d5080cde537157ab170adec9a6fc653b69905bac42.png" /></p>
 <p>在整体矩阵尺度上，OBS在分别评估每一行的待剪枝的参数后，整体更新global mask并计算出剪枝后的W：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd7524951ef178590ab316d3ec779f85233863f63cd94a4f3ac9dd6d49dd3e1360fd50a470c538cab9ff12afc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd7524951ef178590ab316d3ec779f85233863f63cd94a4f3ac9dd6d49dd3e1360fd50a470c538cab9ff12afc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd7524951ef178590ab316d3ec779f85233863f63cd94a4f3ac9dd6d49dd3e1360fd50a470c538cab9ff12afc653b69905bac42.png" /></p>
 <p>其中的重要性估计和参数更新公式原型来自OBS。</p>
 <p>由于前提假设是剪枝，如果改为量化只需要修改松弛变量条件：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752496d67fff0b0512c85a48aad24f65240cb96a852ac660e765b7c3d9cee13e3579f00fd1f9bf46c5498fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752496d67fff0b0512c85a48aad24f65240cb96a852ac660e765b7c3d9cee13e3579f00fd1f9bf46c5498fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752496d67fff0b0512c85a48aad24f65240cb96a852ac660e765b7c3d9cee13e3579f00fd1f9bf46c5498fc653b69905bac42.png" /></p>
 <p>可以得到量化版本的OBC（OBQ）的权重更新公式和重要性评估公式为：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd7524935f9dbbb3f4380f18017238e0d49308b5fb10912f78a93bfc79e79b28af8844be4a3dafbb828401dfc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd7524935f9dbbb3f4380f18017238e0d49308b5fb10912f78a93bfc79e79b28af8844be4a3dafbb828401dfc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd7524935f9dbbb3f4380f18017238e0d49308b5fb10912f78a93bfc79e79b28af8844be4a3dafbb828401dfc653b69905bac42.png" /></p>
 <p>OBQ会按照<strong>参数重要性</strong>对参数进行逐个量化。</p>
 <p>终于到了GPTQ。</p>
 <p>论文：https://arxiv.org/pdf/2210.17323</p>
@@ -912,19 +2031,19 @@ L_q部分就是模型参数对Loss的重要性评估公式。</p>
 <li>OBQ总是使用贪婪算法来优先量化对E影响最小的参数，而GPTQ通过实验发现，针对不同的行的量化顺序并不会影响最终结果，这使得量化可以按<strong>列顺序</strong>进行，且行量化可以<strong>并行进行</strong>，提高量化速度</li>
 <li>按照OBQ的公式，每次量化一个参数后需要更新整体参数矩阵，但是<strong>对当前列进行量化时，后面的列参数对当前的量化无影响，而是受到当前列量化的影响</strong>（当然这是个近似估计）。因此可以按照B=128进行分块，使得块内部参数立即更新，块外部的后续列只是暂时记录更新的值，等128列整体更新完成，在一起更新后续的列参数。这样可以高效利用GPU的并行计算能力，减小吞吐压力。</li>
 </ol>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd7524924e5107e1f51a5b278a23b6a231b367c47e90e57be67c858fce272c759a802a593aebdb4950fbb02fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd7524924e5107e1f51a5b278a23b6a231b367c47e90e57be67c858fce272c759a802a593aebdb4950fbb02fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd7524924e5107e1f51a5b278a23b6a231b367c47e90e57be67c858fce272c759a802a593aebdb4950fbb02fc653b69905bac42.png" /></p>
 <p><strong>Lazy-Batch Updates</strong></p>
 <p>其中的Q代表batch更新的量化索引。</p>
 <ol>
-<li>用 Cholesky 分解求海森矩阵的逆。尤其由于2的块更新步骤，使得<strong>近似计算对量化过程的累积误差变得严重</strong>，并出现了H^{-1}变得非正定的问题。在实验中，小模型可以在H的对角线元素中添加阻尼（对角线元素平均值的1%）来解决。但是对于超大模型而言，该方法仍然不够稳定。因此使用了<strong>数值稳定的Cholesky 矩阵分解</strong>来代替Gauss-Jordan消元法求H^{-1}，并省去了在循环中更新H^{-1}的操作。结合阻尼可以稳定地进行超大模型的量化。</li>
+<li>用 Cholesky 分解求海森矩阵的逆。尤其由于2的块更新步骤，使得<strong>近似计算对量化过程的累积误差变得严重</strong>，并出现了H^{-1}变得非正定的问题。在实验中，小模型可以在H的对角线元素中添加阻尼（对角线元素平均值的1%）来解决。但是对于超大模型而言，该方法仍然不够稳定。因此使用了<strong>数值稳定的Cholesky 矩阵分解</strong>来代替Gauss-Jordan消元法求H<sup -1="-1">{-1}，并省去了在循环中更新H</sup>的操作。结合阻尼可以稳定地进行超大模型的量化。</li>
 </ol>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752495f1b5b6a87aeea034ffe140b0a3a4604611b8f7f18b0ebbcf65b5ae8b35871d15d777a9b4f8d50fffc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752495f1b5b6a87aeea034ffe140b0a3a4604611b8f7f18b0ebbcf65b5ae8b35871d15d777a9b4f8d50fffc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752495f1b5b6a87aeea034ffe140b0a3a4604611b8f7f18b0ebbcf65b5ae8b35871d15d777a9b4f8d50fffc653b69905bac42.png" /></p>
 <p>在比较BnB和GPTQ后，我们可以看到这样的差异：</p>
 <ol>
 <li>BnB量化使用了离群值和非离群值区分处理的策略，因此速度快，不需要数据集。</li>
 <li>GPTQ的量化操作基于泰勒级数分解，其评估公式依赖于海森矩阵，并和输入X强相关，因此需要迭代更新，速度慢但更准确。</li>
 </ol>
-<h3 id="awq"><strong>AWQ量化</strong></h3>
+<h3 id="awq"><strong>AWQ量化</strong><a class="headerlink" href="#awq" title="Permanent link">&para;</a></h3>
 <p>论文：https://arxiv.org/pdf/2306.00978</p>
 <p>了解了BnB量化后，对AWQ量化的理解会更简单一些。BnB量化的思路是按照阈值切分离群值和非离群值，整体进行混合精度训练。而AWQ的论文认为：</p>
 <ol>
@@ -932,9 +2051,9 @@ L_q部分就是模型参数对Loss的重要性评估公式。</p>
 <li>保持显著性权重为fp16会造成硬件实现的困难和速度的降低，因此应当想办法针对这部分权重进行单独量化</li>
 </ol>
 <p>AWQ量化的具体方式仍然是absmax：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249fef7dd29dff0159a334737af532b3091a376a50d31c6e0706dfa1dfa2e899dfb33e4be940bcdf61dfc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249fef7dd29dff0159a334737af532b3091a376a50d31c6e0706dfa1dfa2e899dfb33e4be940bcdf61dfc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249fef7dd29dff0159a334737af532b3091a376a50d31c6e0706dfa1dfa2e899dfb33e4be940bcdf61dfc653b69905bac42.png" /></p>
 <p>不同的是，它在absmax的基础上增加了新的缩放因子s（s&gt;1）：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249bf94a3b701daa5a0a1b474f2a842ff3861add25d5fe7044931e82239611acf153b9d11a94da3fbf1fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249bf94a3b701daa5a0a1b474f2a842ff3861add25d5fe7044931e82239611acf153b9d11a94da3fbf1fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249bf94a3b701daa5a0a1b474f2a842ff3861add25d5fe7044931e82239611acf153b9d11a94da3fbf1fc653b69905bac42.png" /></p>
 <p>缩放因子s可以追溯到一篇叫做SmoothQuant的工作，这里我们不详述。</p>
 <p>之所以能够增加因子s，是因为有几个推论：</p>
 <ol>
@@ -942,7 +2061,7 @@ L_q部分就是模型参数对Loss的重要性评估公式。</p>
 <li>对1%的重要权重进行缩放并不会影响整体的缩放比例</li>
 </ol>
 <p>但是对重要权重进行缩放后，输出的激活值的误差会变为：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249be0696f8c5464a62aa737a8199891a67e24abcabb4b98f542b3d276e9f29e8258011de03f63cf6b2fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249be0696f8c5464a62aa737a8199891a67e24abcabb4b98f542b3d276e9f29e8258011de03f63cf6b2fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249be0696f8c5464a62aa737a8199891a67e24abcabb4b98f542b3d276e9f29e8258011de03f63cf6b2fc653b69905bac42.png" /></p>
 <p>上文提到，增加s对缩放比例和RoundErr的影响比较小，因此重要权重的整体Err会被缩小到1/s倍。</p>
 <p>下面的问题就是如何确定这些重要参数有哪些呢？</p>
 <p>AWQ提出了两种方案：</p>
@@ -951,32 +2070,32 @@ L_q部分就是模型参数对Loss的重要性评估公式。</p>
 <li>权重激活值的L2范数</li>
 </ol>
 <p>经过试验发现，权重本身的L2范数对评估参数重要性没有显著作用，而权重激活值的L2范数可以提现权重的重要性特征，因此采用权重激活值来评估权重本身的重要性。</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752495f16dbb497d923ef526ea7917eebfa94cff7920fff82aadb589c1dce5ce52c0f288cb6649d1bb7c8fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752495f16dbb497d923ef526ea7917eebfa94cff7920fff82aadb589c1dce5ce52c0f288cb6649d1bb7c8fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752495f16dbb497d923ef526ea7917eebfa94cff7920fff82aadb589c1dce5ce52c0f288cb6649d1bb7c8fc653b69905bac42.png" /></p>
 <p>那么s的值是不是越大越好呢?由于s增大可能会影响缩放比例，因此会对非重要参数起到不良影响。根据实验，s=2可以达到最好的效果。</p>
 <p>为了让效果更好，AWQ针对每个量化通道都进行了单独的s值评估：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249ef931fc209681cd12d94d690a5ae08b06a30c840a1e0dc96008496bd8813c6e8f6cb4eabfc6d8780fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249ef931fc209681cd12d94d690a5ae08b06a30c840a1e0dc96008496bd8813c6e8f6cb4eabfc6d8780fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249ef931fc209681cd12d94d690a5ae08b06a30c840a1e0dc96008496bd8813c6e8f6cb4eabfc6d8780fc653b69905bac42.png" /></p>
 <p>目标是找到最优的s是Loss最小。由于无法直接训练（因为量化部分无法求导），因此采用了一个简单的做法：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249584f4ae4dc9c26d4cd0ce4626cfd1c29597ed8d10343f82aad58e1e811dbe64bf48911b12cf5d7cbfc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249584f4ae4dc9c26d4cd0ce4626cfd1c29597ed8d10343f82aad58e1e811dbe64bf48911b12cf5d7cbfc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249584f4ae4dc9c26d4cd0ce4626cfd1c29597ed8d10343f82aad58e1e811dbe64bf48911b12cf5d7cbfc653b69905bac42.png" /></p>
 <p>即，假设S_x是通道内激活值的平均值，设定0&lt;=α&lt;=1，直接进行网格搜索找到最佳值。</p>
-<h3 id="hqq"><strong>HQQ量化</strong></h3>
+<h3 id="hqq"><strong>HQQ量化</strong><a class="headerlink" href="#hqq" title="Permanent link">&para;</a></h3>
 <p>blog：https://mobiusml.github.io/hqq_blog/</p>
 <p>HQQ量化的思路和上面的量化方式不太一样。HQQ量化的问题定义在如何在零点量化中取得最优的z和s（零点和缩放倍数）。</p>
 <p>原问题可以定义为：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752492f315279210a62ddb57ed4e0dc8314ecadfd9a0e754606e157081c005eb8147ee2178d05c6c2a884fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752492f315279210a62ddb57ed4e0dc8314ecadfd9a0e754606e157081c005eb8147ee2178d05c6c2a884fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752492f315279210a62ddb57ed4e0dc8314ecadfd9a0e754606e157081c005eb8147ee2178d05c6c2a884fc653b69905bac42.png" /></p>
 <p>HQQ求解该问题引入了额外参数W_e：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249861dcbfb2253f9ba7a8209c81a0c0557a2c9ee629d8beeebaed45723319a3387bf4a96f6afa886aefc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249861dcbfb2253f9ba7a8209c81a0c0557a2c9ee629d8beeebaed45723319a3387bf4a96f6afa886aefc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249861dcbfb2253f9ba7a8209c81a0c0557a2c9ee629d8beeebaed45723319a3387bf4a96f6afa886aefc653b69905bac42.png" /></p>
 <p>可以看到该问题形式类似于类似Lasso回归，可以使用类似软阈值法求解。在定义了新的参数后，可以将该问题分解为两个子问题：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752492561d47ccaa95ddb09b0770bd7ed5bbb7168516ab5f77bc91d0a45b1e91db17a5195bc41554fa31bfc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752492561d47ccaa95ddb09b0770bd7ed5bbb7168516ab5f77bc91d0a45b1e91db17a5195bc41554fa31bfc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752492561d47ccaa95ddb09b0770bd7ed5bbb7168516ab5f77bc91d0a45b1e91db17a5195bc41554fa31bfc653b69905bac42.png" /></p>
 <p>第一步：固定其他参数，找到使loss最低的</p>
 <p>第二步：固定W_e，找到最优的z</p>
 <p>其中，为了让求解更简单，HQQ将缩放尺度s进行固定，仅优化z（零点）值。</p>
 <p>在第一步中，可以使用软阈值法进行求解，在HQQ中作者使用了另一个通用软阈值求解器，以适应范数小于1的情形。</p>
 <p>第二步可以进行等式变换变为如下形式：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249f0096a8cd9295d7dd0eff39e72e18c9340b16d7373819e21b80f1867cf81309a666252a7308e7a13fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249f0096a8cd9295d7dd0eff39e72e18c9340b16d7373819e21b80f1867cf81309a666252a7308e7a13fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249f0096a8cd9295d7dd0eff39e72e18c9340b16d7373819e21b80f1867cf81309a666252a7308e7a13fc653b69905bac42.png" /></p>
 <p>其解可以直接设置为每个block内部，右侧子式的均值：</p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752494594caaa133b79f89b1a888801bd92a6798d80f05aeba88e95c7819055aa01bab54350e526f2e24afc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752494594caaa133b79f89b1a888801bd92a6798d80f05aeba88e95c7819055aa01bab54350e526f2e24afc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd752494594caaa133b79f89b1a888801bd92a6798d80f05aeba88e95c7819055aa01bab54350e526f2e24afc653b69905bac42.png" /></p>
 <p>可以看到该方法和输入无关，因此不需要量化集。</p>
-<h3 id="_3"><strong>小小的总结</strong></h3>
+<h3 id="_3"><strong>小小的总结</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>我们在这里做个总结：</p>
 <p>前提：量化是把模型的浮点型参数转换为整形（至少是更低的bit数）的过程，减少显存占用。</p>
 <ol>
@@ -985,111 +2104,184 @@ L_q部分就是模型参数对Loss的重要性评估公式。</p>
 <li>AWQ认为部分参数更加重要，通过激活值尺度评估了重要参数后，对这些参数按组进行了缩放，达到了减小Loss的效果，由于需要激活值，因此AWQ也需要量化集辅助量化。</li>
 <li>HQQ通过对零点量化的公式转换，将其分解为两个子问题分别求解，找到最优的z，该迭代对输入无要求，因此不需要量化集。</li>
 </ol>
-<h2 id="qlora"><strong>QLoRA</strong></h2>
+<h2 id="qlora"><strong>QLoRA</strong><a class="headerlink" href="#qlora" title="Permanent link">&para;</a></h2>
 <p>LoRA部分可以参考另外一篇文章：</p>
 <p><a href="https://github.com/modelscope/modelscope-classroom/blob/main/LLM-tutorial/H.训练.md#lora">https://github.com/modelscope/modelscope-classroom/blob/main/LLM-tutorial/H.%E8%AE%AD%E7%BB%83.md#lora</a></p>
-<p><a class="glightbox" href="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249a93a659a88592795ecc0daa6748f9430e0a864b32916b42217f633257efe9e365937e5d34dc1eec1fc653b69905bac42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249a93a659a88592795ecc0daa6748f9430e0a864b32916b42217f633257efe9e365937e5d34dc1eec1fc653b69905bac42.png" /></a></p>
+<p><img alt="img" src="../resources/5eecdaf48460cde548bb3dda8cd21eec7ae4abb8b24820c158e70b814913bc360a414d3de9277d871abf3af1cbd75249a93a659a88592795ecc0daa6748f9430e0a864b32916b42217f633257efe9e365937e5d34dc1eec1fc653b69905bac42.png" /></p>
 <p>简单来说，LoRA是附着在模型上的额外参数矩阵，在训练时冻结原模型，仅训练LoRA部分。如果原模型是量化后的weights（即左边的Pretrained Weights部分），那么和LoRA可以很匹配：原模型占用的显存大大减小了，LoRA部分保持fp16/bf16可以正常forward/backward。</p>
-<h2 id="_4"><strong>应用</strong></h2>
+<h2 id="_4"><strong>应用</strong><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>除上面介绍的量化方法外，还有很多其他类型的量化方法，比如AQLM、EETQ、GGUF等，这么多的量化方式，一个一个了解使用太麻烦了，在<strong>不修改训练代码的情况下适配多种量化策略是非常重要的</strong>。</p>
 <p>在这里使用了魔搭社区的SWIFT框架来进行量化训练。该框架在github上是开源的：</p>
 <p>https://github.com/modelscope/swift</p>
 <p>或者通过pip安装：</p>
-<pre><code>pip install ms-swift
-
-# autoawq和cuda版本有对应关系，请按照`https://github.com/casper-hansen/AutoAWQ`选择版本
-pip install autoawq -U
-
-# auto_gptq和cuda版本有对应关系，请按照`https://github.com/PanQiWei/AutoGPTQ#quick-installation`选择版本
-pip install auto_gptq -U
-
-# hqq和eetq使用暂时需要从源码下载transformers和peft
-pip install git+https://github.com/huggingface/transformers
-pip install git+https://github.com/huggingface/peft.git
-# hqq
-pip install hqq
-# eetq
-git clone https://github.com/NetEase-FuXi/EETQ.git
-cd EETQ/
-git submodule update --init --recursive
-pip install .
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>pip install ms-swift
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a># autoawq和cuda版本有对应关系，请按照`https://github.com/casper-hansen/AutoAWQ`选择版本
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>pip install autoawq -U
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a># auto_gptq和cuda版本有对应关系，请按照`https://github.com/PanQiWei/AutoGPTQ#quick-installation`选择版本
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>pip install auto_gptq -U
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a># hqq和eetq使用暂时需要从源码下载transformers和peft
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>pip install git+https://github.com/huggingface/transformers
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>pip install git+https://github.com/huggingface/peft.git
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a># hqq
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>pip install hqq
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a># eetq
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>git clone https://github.com/NetEase-FuXi/EETQ.git
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>cd EETQ/
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>git submodule update --init --recursive
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>pip install .
+</code></pre></div></td></tr></table></div>
 <p>回顾下上面提到的量化方式，bnb/hqq/eetq是不需要量化数据集的，因此可以在训练前直接量化模型，速度很快。因此推荐即时量化后直接QLoRA训练模型：</p>
-<pre><code>swift sft --model_type llama3-8b-instruct --dataset alpaca-en --quantization_bit 8 --quant_method bnb --sft_type lora
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>swift sft --model_type llama3-8b-instruct --dataset alpaca-en --quantization_bit 8 --quant_method bnb --sft_type lora
+</code></pre></div></td></tr></table></div>
 <p>也可以替换为hqq或者eetq：</p>
-<pre><code>swift sft --model_type llama3-8b-instruct --dataset alpaca-en --quantization_bit 8 --quant_method eetq --sft_type lora
-# --quant_method eetq
-</code></pre>
-<p>其中bnb支持4/8 bit量化，eetq支持8bit量化，hqq支持1/2/3/4/8bit量化。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>swift sft --model_type llama3-8b-instruct --dataset alpaca-en --quantization_bit 8 --quant_method eetq --sft_type lora
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a># --quant_method eetq
+</code></pre></div></td></tr></table></div>
+<p>其中bnb支持4/8 bit量化，eetq支持8bit量化，hqq支持&frac12;/&frac34;/8bit量化。</p>
 <p>而GPTQ和AWQ由于需要量化集的存在，且量化会花费较长时间，因此一般在训练后(或者针对原始模型)再单独量化：</p>
-<pre><code># GPTQ
-OMP_NUM_THREADS=14 swift export --model_type llama3-8b-instruct --quant_method gptq --dataset alpaca-zh alpaca-en sharegpt-gpt4-mini --quant_seqlen 4096 --quant_bits 4
-# AWQ
-swift export --model_type llama3-8b-instruct --quant_bits 4 --quant_method awq --quant_n_samples 64 --quant_seqlen 4096 --dataset alpaca-zh alpaca-en sharegpt-gpt4-mini
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a># GPTQ
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>OMP_NUM_THREADS=14 swift export --model_type llama3-8b-instruct --quant_method gptq --dataset alpaca-zh alpaca-en sharegpt-gpt4-mini --quant_seqlen 4096 --quant_bits 4
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a># AWQ
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>swift export --model_type llama3-8b-instruct --quant_bits 4 --quant_method awq --quant_n_samples 64 --quant_seqlen 4096 --dataset alpaca-zh alpaca-en sharegpt-gpt4-mini
+</code></pre></div></td></tr></table></div>
 <p>注意，实际使用GPTQ量化时需要指定OMP_NUM_THREADS=N，否则会出现CPU占满阻塞的问题。</p>
 <p>swift export指令会使用指定的数据集对模型进行量化，并在本地保存量化后的模型，默认的保存路径为</p>
 <p>'{model_type}-{quant_method}-{quant_bits}'，也可以通过--quant_output_dir来指定</p>
 <p>QLoRA可以支持FSDP（完全分片数据并行技术），因此可以使用BNB+LoRA在两张24G显卡上运行一个70B模型的训练：</p>
-<pre><code># 源代码clone
-# cd examples/pytorch/llm
-# vim fsdp.sh并写入下面的内容
-# pip install bitsandbytes&gt;=0.43.0
-nproc_per_node=2
-
-CUDA_VISIBLE_DEVICES=0,1 \
-accelerate launch --config_file &quot;./scripts/llama2_70b_chat/qlora_fsdp/fsdp_offload.json&quot; \
-    llm_sft.py \
-    --model_type llama2-70b-chat \
-    --model_revision master \
-    --sft_type lora \
-    --tuner_backend peft \
-    --template_type AUTO \
-    --dtype bf16 \
-    --output_dir output \
-    --dataset leetcode-python-en \
-    --train_dataset_sample -1 \
-    --num_train_epochs 1 \
-    --max_length 2048 \
-    --check_dataset_strategy warning \
-    --quantization_bit 4 \
-    --bnb_4bit_comp_dtype AUTO \
-    --bnb_4bit_quant_storage bfloat16 \
-    --lora_rank 8 \
-    --lora_alpha 32 \
-    --lora_dtype AUTO \
-    --lora_dropout_p 0.05 \
-    --lora_target_modules DEFAULT \
-    --gradient_checkpointing true \
-    --batch_size 1 \
-    --weight_decay 0.1 \
-    --learning_rate 1e-4 \
-    --gradient_accumulation_steps $(expr 16 / $nproc_per_node) \
-    --max_grad_norm 0.5 \
-    --warmup_ratio 0.03 \
-    --eval_steps 50 \
-    --save_steps 50 \
-    --save_total_limit 2 \
-    --logging_steps 10 \
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span>
+<span class="normal"><a href="#__codelineno-5-26">26</a></span>
+<span class="normal"><a href="#__codelineno-5-27">27</a></span>
+<span class="normal"><a href="#__codelineno-5-28">28</a></span>
+<span class="normal"><a href="#__codelineno-5-29">29</a></span>
+<span class="normal"><a href="#__codelineno-5-30">30</a></span>
+<span class="normal"><a href="#__codelineno-5-31">31</a></span>
+<span class="normal"><a href="#__codelineno-5-32">32</a></span>
+<span class="normal"><a href="#__codelineno-5-33">33</a></span>
+<span class="normal"><a href="#__codelineno-5-34">34</a></span>
+<span class="normal"><a href="#__codelineno-5-35">35</a></span>
+<span class="normal"><a href="#__codelineno-5-36">36</a></span>
+<span class="normal"><a href="#__codelineno-5-37">37</a></span>
+<span class="normal"><a href="#__codelineno-5-38">38</a></span>
+<span class="normal"><a href="#__codelineno-5-39">39</a></span>
+<span class="normal"><a href="#__codelineno-5-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a># 源代码clone
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a># cd examples/pytorch/llm
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a># vim fsdp.sh并写入下面的内容
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a># pip install bitsandbytes&gt;=0.43.0
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>nproc_per_node=2
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>CUDA_VISIBLE_DEVICES=0,1 \
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>accelerate launch --config_file &quot;./scripts/llama2_70b_chat/qlora_fsdp/fsdp_offload.json&quot; \
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>    llm_sft.py \
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>    --model_type llama2-70b-chat \
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>    --model_revision master \
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a>    --sft_type lora \
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>    --tuner_backend peft \
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a>    --template_type AUTO \
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a>    --dtype bf16 \
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a>    --output_dir output \
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a>    --dataset leetcode-python-en \
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a>    --train_dataset_sample -1 \
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a>    --num_train_epochs 1 \
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a>    --max_length 2048 \
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a>    --check_dataset_strategy warning \
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a>    --quantization_bit 4 \
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a>    --bnb_4bit_comp_dtype AUTO \
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a>    --bnb_4bit_quant_storage bfloat16 \
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a>    --lora_rank 8 \
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a>    --lora_alpha 32 \
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a>    --lora_dtype AUTO \
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a>    --lora_dropout_p 0.05 \
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a>    --lora_target_modules DEFAULT \
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a>    --gradient_checkpointing true \
+<a id="__codelineno-5-31" name="__codelineno-5-31"></a>    --batch_size 1 \
+<a id="__codelineno-5-32" name="__codelineno-5-32"></a>    --weight_decay 0.1 \
+<a id="__codelineno-5-33" name="__codelineno-5-33"></a>    --learning_rate 1e-4 \
+<a id="__codelineno-5-34" name="__codelineno-5-34"></a>    --gradient_accumulation_steps $(expr 16 / $nproc_per_node) \
+<a id="__codelineno-5-35" name="__codelineno-5-35"></a>    --max_grad_norm 0.5 \
+<a id="__codelineno-5-36" name="__codelineno-5-36"></a>    --warmup_ratio 0.03 \
+<a id="__codelineno-5-37" name="__codelineno-5-37"></a>    --eval_steps 50 \
+<a id="__codelineno-5-38" name="__codelineno-5-38"></a>    --save_steps 50 \
+<a id="__codelineno-5-39" name="__codelineno-5-39"></a>    --save_total_limit 2 \
+<a id="__codelineno-5-40" name="__codelineno-5-40"></a>    --logging_steps 10 \
+</code></pre></div></td></tr></table></div>
 <p>如果只是想体验量化后的模型推理阶段，可以借助不需要校准数据集的量化方法，使用swift infer来量化模型并推理，大大减少模型推理所需的显存占用</p>
-<pre><code>CUDA_VISIBLE_DEVICES=0 swift infer \
-    --model_type qwen1half-7b-chat \
-    --quant_method bnb \
-    --quantization_bit 4
-
-CUDA_VISIBLE_DEVICES=0 swift infer \
-    --model_type qwen1half-7b-chat \
-    --quant_method hqq \
-    --quantization_bit 4
-
-CUDA_VISIBLE_DEVICES=0 swift infer \
-    --model_type qwen1half-7b-chat \
-    --quant_method eetq \
-    --dtype fp16
-</code></pre>
-<h2 id="_5">总结</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>CUDA_VISIBLE_DEVICES=0 swift infer \
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>    --model_type qwen1half-7b-chat \
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>    --quant_method bnb \
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>    --quantization_bit 4
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>CUDA_VISIBLE_DEVICES=0 swift infer \
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>    --model_type qwen1half-7b-chat \
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>    --quant_method hqq \
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>    --quantization_bit 4
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>CUDA_VISIBLE_DEVICES=0 swift infer \
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>    --model_type qwen1half-7b-chat \
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>    --quant_method eetq \
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>    --dtype fp16
+</code></pre></div></td></tr></table></div>
+<h2 id="_5">总结<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>在本文中，我们介绍了几种常用量化的思路，以及它们的使用方式。并且我们通过魔搭社区的训练框架SWIFT给出了使用这些量化方式的即开即用流程。如果本文的技术原理存在理解错误，欢迎讨论和反馈。</p>
 
 
@@ -1108,6 +2300,8 @@ CUDA_VISIBLE_DEVICES=0 swift infer \
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -1121,9 +2315,53 @@ CUDA_VISIBLE_DEVICES=0 swift infer \
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../M.%E4%BA%BA%E7%B1%BB%E5%81%8F%E5%A5%BD%E5%AF%B9%E9%BD%90%E8%AE%AD%E7%BB%83/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 人类偏好对齐训练">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                人类偏好对齐训练
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../O.Modelscope-Agent_%20AgentFabric%E5%BE%AE%E8%B0%83%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-footer__link md-footer__link--next" aria-label="下一页: AgentFabric微调最佳实践">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                AgentFabric微调最佳实践
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022~2024 Leo/All Rights Reserved.
+    </div>
   
   
     Made with
@@ -1143,13 +2381,21 @@ CUDA_VISIBLE_DEVICES=0 swift infer \
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation", "navigation.top"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
+        <script src="https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/javascripts/extra.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js"></script>
+      
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+  </body>
 </html>

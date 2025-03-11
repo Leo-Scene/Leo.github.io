@@ -6,17 +6,27 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="知足且上进，温柔且坚定">
       
       
+        <meta name="author" content="乐小文(Leo)">
       
       
+        <link rel="canonical" href="https://lexiaowenn.github.io/groceryStore/src/ai/Q.%E4%BB%8E%20OpenAI-O1%20%E7%9C%8B%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%A4%8D%E6%9D%82%E6%8E%A8%E7%90%86%E8%83%BD%E5%8A%9B/">
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      
+        <link rel="prev" href="../P.PlayGround_%E8%AE%AD%E7%BB%83%E4%B8%80%E4%B8%AA%E5%8F%A4%E6%96%87%E7%BF%BB%E8%AF%91%E8%85%94%E6%9C%BA%E5%99%A8%E4%BA%BA/">
+      
+      
+        <link rel="next" href="../R.10%E5%88%86%E9%92%9F%E6%94%B9%E5%8F%98%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.ipynb">
+      
+      
+      <link rel="icon" href="https://s2.loli.net/2024/04/26/PmRdM9iGnvOJHgu.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
-        <title>从 OpenAI-O1 看大模型的复杂推理能力 - Leo叔叔的杂货铺</title>
+        <title>看大模型的复杂推理能力 - Leo叔叔的杂货铺</title>
       
     
     
@@ -42,6 +52,14 @@
       
     
     
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/link.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/customize.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -49,16 +67,7 @@
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  </head>
   
   
     
@@ -68,7 +77,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,7 +103,12 @@
     <a href="../../.." title="Leo叔叔的杂货铺" class="md-header__button md-logo" aria-label="Leo叔叔的杂货铺" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5zM6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m9 16v-2H6v2zm3-4v-2H6v2z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              从 OpenAI-O1 看大模型的复杂推理能力
+              看大模型的复杂推理能力
             
           </span>
         </div>
@@ -124,20 +138,30 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="indigo"  aria-label="dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="关闭自动模式"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      <label class="md-header__button md-icon" title="关闭自动模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="indigo"  aria-label="light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
       </label>
     
   
@@ -147,6 +171,32 @@
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/Mkdocs-Wcowin/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
     
     
       <label class="md-header__button md-icon" for="__search">
@@ -166,11 +216,18 @@
       </label>
       <nav class="md-search__options" aria-label="查找">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -221,34 +278,22 @@
         
   
   
-  
-    <li class="md-tabs__item">
-      <a href="../A.%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/" class="md-tabs__link">
-        
-  
     
   
-  工具
-
-      </a>
-    </li>
   
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../D.Transformer%E7%BB%93%E6%9E%84/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../A.%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/" class="md-tabs__link">
+          
   
     
   
   Ai
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -262,11 +307,124 @@
         <a href="../../01%E9%A1%B9%E7%9B%AE%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86/" class="md-tabs__link">
           
   
+    
+  
   软考
 
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tag.md" class="md-tabs__link">
+        
+  
+    
+  
+  标签
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../liuyanban.md" class="md-tabs__link">
+        
+  
+    
+  
+  留言板
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blogger
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../about/link.md" class="md-tabs__link">
+          
+  
+    
+  
+  友链
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../about/geren.md" class="md-tabs__link">
+          
+  
+    
+  
+  关于
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://wcowin.work" class="md-tabs__link">
+        
+  
+    
+  
+  个人博客
+
+      </a>
+    </li>
   
 
       
@@ -295,7 +453,12 @@
     <a href="../../.." title="Leo叔叔的杂货铺" class="md-nav__button md-logo" aria-label="Leo叔叔的杂货铺" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5zM6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m9 16v-2H6v2zm3-4v-2H6v2z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
 
     </a>
     Leo叔叔的杂货铺
@@ -328,6 +491,90 @@
       
   
   
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Ai
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ai
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
@@ -335,7 +582,7 @@
         
   
   <span class="md-ellipsis">
-    工具
+    深度学习入门介绍
     
   </span>
   
@@ -344,9 +591,54 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../B.%E9%AD%94%E6%90%AD%E7%A4%BE%E5%8C%BA%E5%92%8CLLM%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    魔搭社区和LLM大模型基础知识
     
-      
-      
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C.%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B-prompt%20engineering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    提示词工程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
   
@@ -356,12 +648,534 @@
         
   
   <span class="md-ellipsis">
-    Ai
+    Transformer结构
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E.%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    技术选型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../F.%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据预处理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../G.%E9%87%8F%E5%8C%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    量化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../H.%E8%AE%AD%E7%BB%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    训练
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../I.LLM%E5%92%8C%E5%A4%9A%E6%A8%A1%E6%80%81%E6%A8%A1%E5%9E%8B%E9%AB%98%E6%95%88%E6%8E%A8%E7%90%86%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM和多模态模型高效推理实践
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../J.%E9%83%A8%E7%BD%B2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    部署
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../K.%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%87%AA%E5%8A%A8%E8%AF%84%E4%BC%B0%E7%90%86%E8%AE%BA%E5%92%8C%E5%AE%9E%E6%88%98--LLM%20Automatic%20Evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    大模型自动评估理论和实战
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L.LISA%E5%BE%AE%E8%B0%83%E6%8A%80%E6%9C%AF%E8%A7%A3%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LISA微调技术解析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../M.%E4%BA%BA%E7%B1%BB%E5%81%8F%E5%A5%BD%E5%AF%B9%E9%BD%90%E8%AE%AD%E7%BB%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    人类偏好对齐训练
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../N.%E9%87%8F%E5%8C%96%E6%8A%80%E6%9C%AF%E8%A7%A3%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    量化技术解析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../O.Modelscope-Agent_%20AgentFabric%E5%BE%AE%E8%B0%83%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AgentFabric微调最佳实践
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P.PlayGround_%E8%AE%AD%E7%BB%83%E4%B8%80%E4%B8%AA%E5%8F%A4%E6%96%87%E7%BF%BB%E8%AF%91%E8%85%94%E6%9C%BA%E5%99%A8%E4%BA%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    训练一个古文翻译腔机器人
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    看大模型的复杂推理能力
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    看大模型的复杂推理能力
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、背景介绍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、背景介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      思维链
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      监督微调
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      强化学习
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      蒙特卡洛树搜索
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o1" class="md-nav__link">
+    <span class="md-ellipsis">
+      O1 的多步推理能力
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、提示词工程
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cot-supervised-fine-tune" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、CoT + Supervised Fine-Tune
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monte-carlo-tree-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、Monte Carlo Tree Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generator-verifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、Generator + Verifier
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openr" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、OpenR
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、OpenR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据收集
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generator 训练
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virifier 训练
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      推理部署
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      七、结论
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      八、参考
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../R.10%E5%88%86%E9%92%9F%E6%94%B9%E5%8F%98%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.ipynb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10分钟改变大模型自我认知
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -374,8 +1188,32 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
       
+      
+        
       
     
     
@@ -383,10 +1221,12 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -398,8 +1238,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             软考
           </label>
@@ -632,6 +1472,335 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tag.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    标签
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../liuyanban.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    留言板
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blogger
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Blogger
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    归档
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    友链
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            友链
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/link.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    友链
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    关于
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            关于
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/geren.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    作者个人简介
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/test.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    功能测试
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://wcowin.work" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    个人博客
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -838,23 +2007,39 @@
                   
 
 
+  
+    <a href="edit/main/docs/src/ai/Q.从 OpenAI-O1 看大模型的复杂推理能力.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="raw/main/docs/src/ai/Q.从 OpenAI-O1 看大模型的复杂推理能力.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
 
-<h1 id="openai-o1">从 OpenAI-O1 看大模型的复杂推理能力</h1>
+
+<h1 id="openai-o1">从 OpenAI-O1 看大模型的复杂推理能力<a class="headerlink" href="#openai-o1" title="Permanent link">&para;</a></h1>
 <p>2022 年 OpenAI 发布了 ChatGPT，成为世界上最快突破上亿用户的 APP，那时候人们都认为，我们离真正的人工智能更近了。但是人们很快发现，ChatGPT 可以对话聊天，甚至可以写诗写文章，但在简单的逻辑上依然不尽如人意，比如那个著名的 "strawberry" 中有几个 "r" 的梗。</p>
 <p>而两年以后的今天，OpenAI 又发布了 O1 模型，以其强大的逻辑推理能力和 OpenAI 强大的技术隐藏能力引发了人们对它背后方法的热烈讨论。本文梳理了一些相关文章，以对 O1 模型技术的猜测为引，看一看大模型的复杂推理能力的发展历程。</p>
-<h2 id="_1">一、背景介绍</h2>
-<h3 id="_2">思维链</h3>
+<h2 id="_1">一、背景介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">思维链<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Chain of Thought，简称 CoT，是一种认知心理学和教育学中的概念，它描述了人们在解决问题或做出决策时思维的逐步发展过程。这个过程不仅仅是简单地从问题直接跳跃到答案，而是包含了多个步骤，每个步骤都可能涉及信息的收集、分析、评估以及对先前结论的修正。通过这种方式，个体能够更系统地处理复杂的问题，并构建出合理的解决方案。</p>
-<h3 id="_3">监督微调</h3>
+<h3 id="_3">监督微调<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>Supervised Learning，监督学习，是机器学习领域最常见的模型训练方式，使用标注好的数据集让模型从中学习，以准确分类数据或预测结果。输入数据进入到模型中时，监督学习会调整模型的权重，直到模型产生适当的拟合。</p>
 <p>Supervised Fine-Tune，简称 SFT，是指我们在已有基座模型的上，使用专注于某一项特殊任务的数据集训练模型进行监督学习，以期其能从中学习到解决特殊任务的能力。</p>
-<h3 id="_4">强化学习</h3>
+<h3 id="_4">强化学习<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>Reinforcement Learning，简称 RL，强化学习是三种基本机器学习范式之一，与监督学习和无监督学习并列。强化学习的重点是在探索（未知）和利用（已知）之间找到平衡，让模型以最大化长期回报为目标，学习到正确的行为。</p>
-<p><a class="glightbox" href="/LLM-tutorial/resources/RL.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="RL.png" src="/LLM-tutorial/resources/RL.png" /></a></p>
+<p><img alt="RL.png" src="/LLM-tutorial/resources/RL.png" /></p>
 <p>图片来自<a href="https://aws.amazon.com/what-is/reinforcement-learning/">AWS</a>，如图所示，在强化学习中，智能体 (Agent) 是我们最终需要训练的目标，与设定好的环境 (Environment) 进行交互行为 (Action) 并产生奖励 (Reward) 和状态 (state) 转移，Agent 根据奖励进行学习更好地选择下一步 Action，如此循环就是强化学习的训练过程。</p>
 <p>在 LLM 的训练过程中，RL 起了重要作用，预训练阶段借助 RLHF 进行对齐已经成了业界共识。在 LLM 的强化学习中，我们通常需要一个另一个模型模拟环境，对 LLM 的输出进行奖励，这个模型称为 Reward Model，简称 RM。有关 LLM 的 RL 的介绍可以参考我们的另一篇文章，我们在这里仅介绍其一般范式：</p>
 <p>我们会有多个模型：Actor 模型、Critic 模型和 Reward 模型。与上文标准 RL 的训练框架一致，在 RL 训练过程中，由 Actor 和 Critic 组成 Agent，Reward 则作为 Environment 进行训练。</p>
-<p><a class="glightbox" href="/LLM-tutorial/resources/RL-LLM.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="RL-LLM.png" src="/LLM-tutorial/resources/RL-LLM.png" /></a></p>
+<p><img alt="RL-LLM.png" src="/LLM-tutorial/resources/RL-LLM.png" /></p>
 <p>但是训练结束之后，我们可以单独部署 Actor 或者 Reward 模型，其中 Actor 模型是我们的 Generator，Reward 模型则是我们用于衡量 Generator 生成质量的 Verifier，这就是 OpenAI 在 Let's verify step by step 这篇论文中提到的 Generator-Verifier 结构。</p>
 <p>而 Reward Model 可以根据其反馈的细致程度分为：</p>
 <ul>
@@ -866,9 +2051,9 @@
 </li>
 </ul>
 <p>关于这两个概念我们在下文的具体场景中介绍。</p>
-<h3 id="_5">蒙特卡洛树搜索</h3>
+<h3 id="_5">蒙特卡洛树搜索<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>Monte Carlo Tree Search，简称 MCTS，是一个树搜索算法，核心思想是，每一步尝试多个行为并预测行为未来的可能收益，侧重于选择性探索一些更具有收益的行为。</p>
-<p><a class="glightbox" href="/LLM-tutorial/resources/MCTS_Algorithm.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MCTS_Algorithm.png" src="/LLM-tutorial/resources/MCTS_Algorithm.png" /></a></p>
+<p><img alt="MCTS_Algorithm.png" src="/LLM-tutorial/resources/MCTS_Algorithm.png" /></p>
 <p>图片来自<a href="https://en.wikipedia.org/wiki/Monte_Carlo_tree_search">维基百科</a>。每一次探索称为分为四个步骤：</p>
 <ol>
 <li>
@@ -886,22 +2071,22 @@
 </ol>
 <p>通过不断的探索，我们就能得到一棵树，并且每一个结点都有探索的可能结果，我们可以在这棵树中搜索得到最佳的路径或结果。</p>
 <p>MCTS 用于 RL 时产生过 AlphaZero 这样知名的模型。AlphaZero 的做法是使用可训练的模型执行 Selection 和 Rollout 的步骤。从而减少 MCTS 庞大的搜索空间和模拟成本，以高效的得到最优解，比如：使用 Policy Network 高效搜索下一步的可能；使用 Value Network 判断每一步的价值而非 Rollout 模拟。</p>
-<h3 id="o1">O1 的多步推理能力</h3>
+<h3 id="o1">O1 的多步推理能力<a class="headerlink" href="#o1" title="Permanent link">&para;</a></h3>
 <p>提到 O1 模型，就不得不说起令人惊讶的<strong>多步推理能力</strong>。<a href="https://openai.com/index/learning-to-reason-with-llms/">OpenAI 官网</a>给出的几个例子直观的展示了其在 密码、代码、数学、填字游戏等多个方面的多步推理能力。其中“密码”相关的示例，解码得到的结果是 “THERE ARE THREE R’S IN STRAWBERRY” 也是对曾经 ChatGPT 推理能力的回应。</p>
-<p><a class="glightbox" href="/LLM-tutorial/resources/GPT-4o&amp;O1-preview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="GPT-4o&amp;O1-preview.png" src="/LLM-tutorial/resources/GPT-4o&amp;O1-preview.png" /></a></p>
+<p><img alt="GPT-4o&amp;O1-preview.png" src="/LLM-tutorial/resources/GPT-4o&amp;O1-preview.png" /></p>
 <p>因此，我们主要探究了在这项能力方面的一些论文，整理总结如下：</p>
-<h2 id="_6">二、提示词工程</h2>
+<h2 id="_6">二、提示词工程<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>在介绍用于提升模型推理能力的提示词工程之前，我们先要了解，什么是 Few-Shot Learning。目前人工智能的训练普遍需要大量的示例数据，而如果只使用很少的示例数据进行学习，就被称为 Few-Shot，如果完全不给示例，则称为 Zero-Shot。</p>
 <p>《Chain of Thought Prompting Elicits Reasoning in Large Language Models》这篇论文提出的就是一种 Few-Shot 的方法提升模型的数学推理能力：</p>
-<p><a class="glightbox" href="/LLM-tutorial/resources/CoT-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="CoT-1.png" src="/LLM-tutorial/resources/CoT-1.png" /></a></p>
+<p><img alt="CoT-1.png" src="/LLM-tutorial/resources/CoT-1.png" /></p>
 <p>如图所示，左侧在输入 LLM 的 Prompt 中，给出了一个样例让 LLM 学习，这就是 Few-Shot Learning，但是其效果依然不理想。论文提出了右边这种带有 CoT 的 Few-Shot 范式。所以右侧在 Few-Shot 中，不仅给出一个示例的问题和答案，还给出了中间过程和结果。作者发现，这样使用 CoT 构造的 Few-Shot Prompt 提高了模型的推理能力。</p>
 <p>而随着模型本身能力的提高以及研究的深入，《Large Language Models are Zero-Shot Reasoners》这篇文章进一步发现 Zero-Shot 也可以使用 CoT 来增强模型能力了：</p>
-<p><a class="glightbox" href="/LLM-tutorial/resources/CoT-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="CoT-2.png" src="/LLM-tutorial/resources/CoT-2.png" /></a></p>
+<p><img alt="CoT-2.png" src="/LLM-tutorial/resources/CoT-2.png" /></p>
 <p>无需费心费力构造一个 CoT 中间过程，甚至无需构造示例进行 Few-Shot，一句简单的 “Let's think step by step” 就可以增强 LLM 的能力。听起来不做白不做。这一 Prompt 后来被 OpenAI 拿去改了一改变成了《Let's verify step by step》，而这篇论文是目前所有想要了解 O1 的人反复阅读的核心。</p>
 <p>当然仅仅依靠提示词工程构建 CoT 不可能是 O1 如此强大的原因，但 CoT 这种一步步推进逻辑的做法，成为大模型增强推理能力的主流方向。</p>
-<h2 id="cot-supervised-fine-tune">三、CoT + Supervised Fine-Tune</h2>
+<h2 id="cot-supervised-fine-tune">三、CoT + Supervised Fine-Tune<a class="headerlink" href="#cot-supervised-fine-tune" title="Permanent link">&para;</a></h2>
 <p>当然，也有人尝试将 CoT 的多步推理能力使用 SFT 的方式教给 LLM。《STaR: Bootstrapping Reasoning With Reasoning》是一个早期尝试。下图来自该论文：</p>
-<p><a class="glightbox" href="/LLM-tutorial/resources/SFT+CoT.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="SFT+CoT.png" src="/LLM-tutorial/resources/SFT+CoT.png" /></a></p>
+<p><img alt="SFT+CoT.png" src="/LLM-tutorial/resources/SFT+CoT.png" /></p>
 <p>论文的思路是这样的。首先我们用上文的提示词工程的方式，让模型尝试 CoT 在数据集上进行推理，会得到一批答案，答案自然有对有错：</p>
 <ul>
 <li>
@@ -912,10 +2097,10 @@
 </li>
 </ul>
 <p>由于这篇研究时间较早，我们现在很容易发现其中的漏洞，比如：LLM 其实经常发生“过程错误但是结果正确”或者“过程正确但是结果错误”的情况，这意味着上文我们用于训练的样本其实并没有那么高的质量。那么如何得到更加正确的推理过程呢？</p>
-<h2 id="monte-carlo-tree-search">四、Monte Carlo Tree Search</h2>
+<h2 id="monte-carlo-tree-search">四、Monte Carlo Tree Search<a class="headerlink" href="#monte-carlo-tree-search" title="Permanent link">&para;</a></h2>
 <p>上文我们已经知道 CoT 把从问题到答案的逻辑已经拆成了一个又一个中间思维过程，那么 MCTS 是否可以用于搜索下一步推理的最佳思维步骤，从而获得最佳推理思维链？自然可以。</p>
 <p>《Mutual Reasoning Makes Smaller LLMs Stronger Problem-Solvers》就设计了这样一个 MCTS 算法，称为 rStar，他们将项目开源至了<a href="https://github.com/zhentingqi/rStar">GitHub</a>。下图来自该论文，是不是和上文 MCTS 的图片有一些相似之处了？</p>
-<p><a class="glightbox" href="/LLM-tutorial/resources/MCTS+CoT.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MCTS+CoT.png" src="/LLM-tutorial/resources/MCTS+CoT.png" /></a></p>
+<p><img alt="MCTS+CoT.png" src="/LLM-tutorial/resources/MCTS+CoT.png" /></p>
 <p>如上图所示，研究人员把 CoT 的中间步骤分成了 5 个类型的结点：</p>
 <p>1. 产生下一步推理</p>
 <p>2. 产生后续所有推理</p>
@@ -935,19 +2120,19 @@
 <p>过程正确性：路径中每一个推理结点，并行生成若干 2 型结点生成若干一步到位的最终结果，这些结果中，目前路径的最终结果的比例视为该推理结点的过程得分。 通过三部分衡量，就能得到一条最佳路径，将最佳路径的最终结果视为 MCTS 的结果。</p>
 </li>
 </ul>
-<h2 id="generator-verifier">五、Generator + Verifier</h2>
+<h2 id="generator-verifier">五、Generator + Verifier<a class="headerlink" href="#generator-verifier" title="Permanent link">&para;</a></h2>
 <p>除了上文的 MCTS 可以将思维过程组织成树形并进行探索，还有其他方式。比如强化学习，我们再次看强化学习的介绍：</p>
-<p><a class="glightbox" href="/LLM-tutorial/resources/RL-LLM.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="RL-LLM.png" src="/LLM-tutorial/resources/RL-LLM.png" /></a></p>
+<p><img alt="RL-LLM.png" src="/LLM-tutorial/resources/RL-LLM.png" /></p>
 <p>如果我们把 LLM 作为 Actor，另一个针对问题训练的 RM 作为 Environment，加上一个隐含的 Critic。这样一个强化学习的循环就是：Actor 针对问题产生一个结果，RM 验证这个结果的正确性并反馈给 Agent，Actor 和 Critic 根据 Reward 进行学习训练。我们把这里的 Agent 称为 Generator，因为他的任务是产生结果；RM 称为 Verifier，因为他的任务是验证结果。</p>
 <p>仔细想想，Agent 内部的 Actor 和 Critic 的关系，与 AlphaZero 使用的 Policy 和 Value 网络是不是很像？事实也是这样，Policy 和 Value 网络也符合 Actor 和 Critic 框架。</p>
 <p>现在我们总结一下，一次强化学习的过程有 Actor、Critic 和 RM 三个网络参与。而在部署时，根据情况的不同，使用不同的框架部署：棋类游戏中只有在对局结束的时候，才能知道胜负，RM 给予的 Reward 太少，因此我们选择在部署时保留 Actor-Critic 框架，然后进行 MCTS 以获得更好的解决方案；而在 LLM 部署时，我们训练好的 RM 可以及时反馈，那么我们在部署的时候自然也可以组合 Actor 和 RM 成 Generator-Verifier 框架。</p>
 <p>OpenAI 在 GPT3（ChatGPT 是基于 GPT-3.5 模型的）时代就已经在研究这个方向了。他们给出的方案是论文《Training Verifiers to Solve Math Word Problems》。下图来自该论文：</p>
-<p><a class="glightbox" href="/LLM-tutorial/resources/Verifier.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Verifier.png" src="/LLM-tutorial/resources/Verifier.png" /></a></p>
+<p><img alt="Verifier.png" src="/LLM-tutorial/resources/Verifier.png" /></p>
 <p>上图对比了：“仅仅微调 Generator 得到的结果的正确率” 和 “微调一个 Verifier，对 Generator 产生的多个结果进行评估，选择更高评价的结果的正确率”，证明了 Verifier 的有效性。</p>
 <p>因为这里的任务是：根据问题推理得到结果。所以使用的 Generator 并不产生中间的推理过程而是直接产生结果，Verifier 也是我们在强化学习一节中提到的 ORM（基于结果的奖励模型），其作用是根据 Generator 的结果产生一个评分。所以这里并没有涉及我们想要探究的多步推理的过程，仅仅只是发现 ORM 验证得到的最终结果比简单微调更好。</p>
 <p>于是 OpenAI 团队更进一步：一方面让 Generator 不再直接输出结果，而是产生逐步推理；另一方面，训练了一个 PRM（基于过程的奖励模型），作为 Verifier，其作用是针对 Generator 推理过程中的每一步产生评分。我们认为这样力求 Generator 推理的过程正确性所产生的结果，才是最有可能正确的。</p>
 <p>这就是上文我们提到的《Let's verify step by step》。在这个工作中，团队对比了 PRM 和 ORM 分别作为 Verifier，搜索相同 Generator 产生的推理结果（此时他们的 Generator 已经是 GPT-4 了），证明 PRM 作为 Verifier 搜索得到的结果更准确。下图来自该论文：</p>
-<p><a class="glightbox" href="/LLM-tutorial/resources/PRM-ORM.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="PRM-ORM.png" src="/LLM-tutorial/resources/PRM-ORM.png" /></a></p>
+<p><img alt="PRM-ORM.png" src="/LLM-tutorial/resources/PRM-ORM.png" /></p>
 <p>上图说明，同一个逐步推理的 Generator 产生的结果，我们使用 ORM 作为 Verifier 选出结果最佳的答案是有效的，但我们使用 PRM 作为 Verifier 选出过程最佳的答案，正确率更高！</p>
 <p>这是不是就是我们想要寻找的 O1 背后的技术呢？我们目前只能猜测，这是背后的核心技术之一。理由如下：</p>
 <ol>
@@ -959,7 +2144,7 @@
 </li>
 </ol>
 <p>说完猜测，我们继续探究利用 Verifier 进行搜索的其他方式。来自 Google DeepMind 今年 8 月份的文章《Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters》做了更多的研究。这篇文章被许多人认为是展示了和 O1 背后原理类似的技术路线。下图来自该论文：</p>
-<p><a class="glightbox" href="/LLM-tutorial/resources/RM+Search.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="RM+Search.png" src="/LLM-tutorial/resources/RM+Search.png" /></a></p>
+<p><img alt="RM+Search.png" src="/LLM-tutorial/resources/RM+Search.png" /></p>
 <p>已知我们有了 Generator 和 Verifier，如何让他们互相配合得到最优结果呢？上文提到的一个方法是，Generator 并行采样得到多个结果，Verifier 评估后选择最高分。这就是上图里的左侧的 Parallel Sampling + Best-of-N 的做法。但是显然还有其他做法：</p>
 <ul>
 <li>
@@ -969,31 +2154,31 @@
 <p>由 Verifier 进行选择的时候，除了 Best-of-N，也可以有其他办法。如来自该论文的下图所示：</p>
 </li>
 </ul>
-<p><a class="glightbox" href="/LLM-tutorial/resources/Verifier-Search.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Verifier-Search.png" src="/LLM-tutorial/resources/Verifier-Search.png" /></a></p>
+<p><img alt="Verifier-Search.png" src="/LLM-tutorial/resources/Verifier-Search.png" /></p>
 <p>论文发现，简单的问题，我们应该使用 Verifier 鼓励 Generator 进行自我检查和改正，而不是盲目并行搜索。而复杂的问题，Generator 并行尝试不同的方案是更好的选择。</p>
 <p>类似的工作是《A Comparative Study on Reasoning Patterns of OpenAI's o1 Model》。论文团队在 GitHub 上开源了一个复刻 O1 的项目 Open-O1，这篇文章是他们在 O1 发布之后的一些调研成果。下图来自该论文：</p>
-<p><a class="glightbox" href="/LLM-tutorial/resources/Open-O1_result.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Open-O1_result.png" src="/LLM-tutorial/resources/Open-O1_result.png" /></a></p>
+<p><img alt="Open-O1_result.png" src="/LLM-tutorial/resources/Open-O1_result.png" /></p>
 <p>团队使用 GPT-4o 作为骨架模型，然后使用四种常见的让 LLM 实现 thinking-before-reasoning 的方法，对比了他们的效果。团队发现，在 HotpotQA 任务上，Best-of-N 和 Step-wise BoN 的方式都能够明显提高 LLM 的推理能力，BoN 甚至使得 GPT-4o 超过了 O1 模型。</p>
-<h2 id="openr">六、OpenR</h2>
+<h2 id="openr">六、OpenR<a class="headerlink" href="#openr" title="Permanent link">&para;</a></h2>
 <p>以上介绍了一些在 LLM 复杂推理能力上的研究和相关论文。我们也调研了目前的一些尝试复刻 O1 的开源项目。<a href="https://github.com/openreasoner/openr">OpenR</a> 是其中完成度较高的一个。</p>
-<p><a class="glightbox" href="/LLM-tutorial/resources/OpenR.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="OpenR.png" src="/LLM-tutorial/resources/OpenR.png" /></a></p>
+<p><img alt="OpenR.png" src="/LLM-tutorial/resources/OpenR.png" /></p>
 <p>图片来自其<a href="https://openreasoner.github.io/">官方文档</a>，目前来看，其实现了数据收集以及符合 Generator-Verifier 框架的训练与部署。</p>
-<h4 id="_7">数据收集</h4>
+<h4 id="_7">数据收集<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>根据官方介绍，数据收集方法来自论文：《Improve Mathematical Reasoning in Language Models by Automated Process Supervision》。简单来说，OpenR 团队使用 MCTS 扩展原有的 problem-final_answer 数据集，生成 CoT 推理步骤。最后得到一个 MATH-APS 数据集。</p>
-<h4 id="generator">Generator 训练</h4>
+<h4 id="generator">Generator 训练<a class="headerlink" href="#generator" title="Permanent link">&para;</a></h4>
 <p>团队使用强化学习中的 PPO 算法变体训练 Generator。简单来说，PPO 算法是利用 Reward Model 提供的 Reward 信息进行训练，同时限制 Actor，使其在学习过程中不偏离原始 Actor 太远，避免丢失已有的知识。目前 OpenR 支持 APPO、GRPO 和 TPPO 三个变体。</p>
-<h4 id="virifier">Virifier 训练</h4>
+<h4 id="virifier">Virifier 训练<a class="headerlink" href="#virifier" title="Permanent link">&para;</a></h4>
 <p>团队使用 SFT 监督学习训练一个 PRM，使用的数据集除了上文的 MATH-APS 数据集，还包括 PRM800K 、 Math-Shepherd 两个开源数据集。具体来说，在这三个 Step 级别的数据集上，团队对每一个 step 标注 “+” 或者 “-” 标签，然后让 PRM 学习预测每一个 Step 的标签，判断其正确与否。</p>
-<h4 id="_8">推理部署</h4>
+<h4 id="_8">推理部署<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>在部署时，OpenR 通过指定的 Generator 和 Verifier 使用搜索算法，获得推理过程和最终答案。目前支持 MCTS、Beam Search、best_of_n 三种搜索方式。</p>
-<p><a class="glightbox" href="/LLM-tutorial/resources/OpenR_framework.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="OpenR_framework.png" src="/LLM-tutorial/resources/OpenR_framework.png" /></a></p>
+<p><img alt="OpenR_framework.png" src="/LLM-tutorial/resources/OpenR_framework.png" /></p>
 <p>图片来自论文《OpenR: An Open Source Framework for Advanced Reasoning with Large Language Models》。OpenR 的结构如图所示，目前来说，OpenR 实现了一条复刻 O1 的链路，从收集训练数据到训练一个 PRM，再到使用 PRM 强化学习，最后部署模型进行搜索，并且团队将工作全部开源供社区学习尝试，让我们得以一窥究竟。</p>
-<h2 id="_9">七、结论</h2>
+<h2 id="_9">七、结论<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <p>我们调研的以上有关多步推理的论文，证明了让 LLM 逐步进行推理而不是跳过中间过程能够显著增强其在和逻辑相关的问题上的准确性。为了让 LLM 进行逐步推理，我们除了可以用简单的提示词工程引导，也可以使用一些带有中间过程的数据集进行微调。而更有效的做法是，训练一个能够逐步验证 Generator 准确性的 Verifier 对 Generator 生成的结果进行搜索。</p>
 <p>从目前的猜测和论文来看，迈向 O1 的可能技术正是基于强大的 LLM Generator 和 LLM Verifier 之间的配合。这种左脚踩右脚，自己对抗自己进行自我迭代的做法，在深度学习领域已经不是第一次了，但 OpenAI 却是率先将这样的模式引入光训练 Generator 就耗资巨大的 LLM 领域，确实财大气粗。</p>
 <p>因此我们认为，如果想要复刻 O1，首先需要的是一个可以为 Generator 提供辅助和指导的 Verifier，而为了产生训练 Verifier 所需要的数据，可以参考上文 CoT + Supervised Fine-Tune 和 Monte Carlo Tree Search 章节，以较低成本的方式获得较高质量的数据。这也就是为什么我们也介绍了这几项工作。</p>
 <p>最后我们介绍了一个完成度较高的开源项目，基于他们的工作，我们得以整理自己的思路和想法。</p>
-<h2 id="_10">八、参考</h2>
+<h2 id="_10">八、参考<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Cobbe, Karl, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, et al. 2021. “Training Verifiers to Solve Math Word Problems.” https://arxiv.org/abs/2110.14168v2.</li>
 <li>Kojima, Takeshi, Shixiang Shane Gu, Machel Reid, Yutaka Matsuo, and Yusuke Iwasawa. 2022. “Large Language Models Are Zero-Shot Reasoners.” https://arxiv.org/abs/2205.11916v4.</li>
@@ -1025,6 +2210,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -1038,9 +2225,53 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../P.PlayGround_%E8%AE%AD%E7%BB%83%E4%B8%80%E4%B8%AA%E5%8F%A4%E6%96%87%E7%BF%BB%E8%AF%91%E8%85%94%E6%9C%BA%E5%99%A8%E4%BA%BA/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 训练一个古文翻译腔机器人">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                训练一个古文翻译腔机器人
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../R.10%E5%88%86%E9%92%9F%E6%94%B9%E5%8F%98%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.ipynb" class="md-footer__link md-footer__link--next" aria-label="下一页: 10分钟改变大模型自我认知">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                10分钟改变大模型自我认知
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022~2024 Leo/All Rights Reserved.
+    </div>
   
   
     Made with
@@ -1060,13 +2291,21 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation", "navigation.top"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
+        <script src="https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/javascripts/extra.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js"></script>
+      
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+  </body>
 </html>
