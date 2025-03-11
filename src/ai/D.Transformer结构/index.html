@@ -1657,7 +1657,7 @@
 
 <h1 id="transformer">Transformer结构模型<a class="headerlink" href="#transformer" title="Permanent link">&para;</a></h1>
 <p>在2017年之后，Transformer结构模型几乎横扫一切统治了NLP领域，后面的CV领域和Audio领域也大放异彩。相比LSTM和CNN结构，Transformer结构好在哪里呢？</p>
-<p><img src="resources/image-20240116205728780.png" alt="image-20240116205728780" style="zoom:50%;" /></p>
+<p><img alt="image" src="../resources/image-20240116205728780.png" /></p>
 <p>这是LLaMA2的模型结构。</p>
 <p>介绍下基本结构和流程：</p>
 <ol>
@@ -1676,8 +1676,7 @@
 <li>Transformer结构并不预设归纳偏差，因此需要大数据量训练才有较好效果。但其对于token的并行计算大大加速了推理速度，并且对分布式训练支持较好，因此在目前数据量充足的情况下反而异军突起。由于内置了positional-embedding，因此较好地解决了attention结构中的位置不敏感性</li>
 </ul>
 <h1 id="encoderdecoder">Encoder和Decoder<a class="headerlink" href="#encoderdecoder" title="Permanent link">&para;</a></h1>
-<p>docs\src\ai\resources\3f700aa9-eadb-4921-93bf-a61d2361b53c.png
-<img src="resources/image-20240116212517161.png" alt="image-20240116212517161" style="zoom:30%;" /></p>
+<p><img alt="image" src="../resources/image-20240116212517161.png" /></p>
 <p>如上图所示，左边是encoder，右边是decoder。我们可以看到目前的LLM模型几乎都是decoder结构，为什么encoder-decoder结构模型消失了呢？有以下几个原因：</p>
 <ul>
 <li>encoder-decoder模型分布式训练困难 decoder模型结构简单，其分布式训练相对容易，而encoder-decoder结构的模型由于结构复杂的多导致了训练时工程结构复杂，成本大大增加</li>
@@ -1721,9 +1720,9 @@ $$</p>
 <li>相对位置数值很稳定</li>
 </ol>
 <p>RoPE的全称是旋转位置编码(Rotary Positional Embedding)，该编码的推导过程和Sinusoidal Position Encoding的推导过程比较类似，不同之处在于后者是加性的，而前者是乘性的，因此得到的位置编码类似于：</p>
-<p><img src="resources/aed18027-66e6-46f6-9649-911564f6886e.png" alt="image-20240116212517161" style="zoom:50%;" /></p>
+<p><img alt="image" src="../resources/aed18027-66e6-46f6-9649-911564f6886e.png" /></p>
 <p>或者也可以简化为：</p>
-<p><img src="resources/4e8e8ce0-84bb-463a-b28f-e1d6df3c6b4a.png" alt="image-20240116212517161" style="zoom:50%;" /></p>
+<p><img alt="image" src="../resources/4e8e8ce0-84bb-463a-b28f-e1d6df3c6b4a.png" /></p>
 <p>该位置编码表示相对位置的几何意义比较明显，也就是两个向量的角度差。</p>
 <p>该位置编码的优势在于：</p>
 <ol>
@@ -1750,7 +1749,7 @@ $$</p>
 <p>GQA（Grouped-Query Attention，来自于论文：GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints）在MQA的基础上分成了G个组，组内共享KV。</p>
 <p>在Llama2模型中，70B参数为了提升推理性能使用了GQA，其他版本没有使用这项技术。</p>
 <h2 id="chatglm2">ChatGLM2的模型结构<a class="headerlink" href="#chatglm2" title="Permanent link">&para;</a></h2>
-<p><img src="resources/bd665ecd-9391-4996-a45c-f8dad7e84822.png" alt="img" style="zoom:50%;" /></p>
+<p><img alt="image" src="../resources/bd665ecd-9391-4996-a45c-f8dad7e84822.png" /></p>
 <p>ChatGLM2模型结构和Llama2的结构有一定相似之处，主要不同之处在于：</p>
 <ol>
 <li>在开源的ChatGLM2代码中没有使用GQA，而是使用了MQA</li>
