@@ -24,7 +24,7 @@
 - Transformer结构并不预设归纳偏差，因此需要大数据量训练才有较好效果。但其对于token的并行计算大大加速了推理速度，并且对分布式训练支持较好，因此在目前数据量充足的情况下反而异军突起。由于内置了positional-embedding，因此较好地解决了attention结构中的位置不敏感性
 
 # Encoder和Decoder
-
+docs\src\ai\resources\3f700aa9-eadb-4921-93bf-a61d2361b53c.png
 <img src="resources/image-20240116212517161.png" alt="image-20240116212517161" style="zoom:30%;" />
 
 如上图所示，左边是encoder，右边是decoder。我们可以看到目前的LLM模型几乎都是decoder结构，为什么encoder-decoder结构模型消失了呢？有以下几个原因：
