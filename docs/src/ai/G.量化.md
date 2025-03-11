@@ -22,10 +22,10 @@
 按照量化方法可以划分为**线性量化、非线性量化（如对数量化）**等多种方式，目前较为常用的是线性量化。其中线性量化又可以按照对称性划分为**对称量化和非对称量化**，非对称量化为了解决weight分布不均匀问题，其在公式中增加了zero_point项：qweight=round(weight/scale + zero_point)，使稠密数据部分可以得到更宽泛的数值范围。
 
 
+![img](resources/image-20240116173833918.png)
 
-<img src="resources/image-20240116173833918.png" alt="image-20240116173833918" style="zoom:50%;" />
 
-<img src="resources/image-20240116173902206.png" alt="image-20240116173902206" style="zoom:50%;" />
+![img](resources/image-20240116173902206.png)
 
 按照量化粒度划分可以分为**逐层量化（每层使用一套量化因子）、逐组量化（在每层中按照group使用一套量化因子）、逐通道量化（按channel划分量化因子）**等几种方式。
 

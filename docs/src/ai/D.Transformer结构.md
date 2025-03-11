@@ -2,7 +2,7 @@
 
 在2017年之后，Transformer结构模型几乎横扫一切统治了NLP领域，后面的CV领域和Audio领域也大放异彩。相比LSTM和CNN结构，Transformer结构好在哪里呢？
 
-<img src="resources/image-20240116205728780.png" alt="image-20240116205728780" style="zoom:50%;" />
+![image](resources/image-20240116205728780.png)
 
 这是LLaMA2的模型结构。
 
@@ -24,8 +24,8 @@
 - Transformer结构并不预设归纳偏差，因此需要大数据量训练才有较好效果。但其对于token的并行计算大大加速了推理速度，并且对分布式训练支持较好，因此在目前数据量充足的情况下反而异军突起。由于内置了positional-embedding，因此较好地解决了attention结构中的位置不敏感性
 
 # Encoder和Decoder
-docs\src\ai\resources\3f700aa9-eadb-4921-93bf-a61d2361b53c.png
-<img src="resources/image-20240116212517161.png" alt="image-20240116212517161" style="zoom:30%;" />
+
+![image](resources/image-20240116212517161.png)
 
 如上图所示，左边是encoder，右边是decoder。我们可以看到目前的LLM模型几乎都是decoder结构，为什么encoder-decoder结构模型消失了呢？有以下几个原因：
 
@@ -84,11 +84,11 @@ ALiBi的好处在于：
 
 RoPE的全称是旋转位置编码(Rotary Positional Embedding)，该编码的推导过程和Sinusoidal Position Encoding的推导过程比较类似，不同之处在于后者是加性的，而前者是乘性的，因此得到的位置编码类似于：
 
-<img src="resources/aed18027-66e6-46f6-9649-911564f6886e.png" alt="image-20240116212517161" style="zoom:50%;" />
+![image](resources/aed18027-66e6-46f6-9649-911564f6886e.png)
 
 或者也可以简化为：
 
-<img src="resources/4e8e8ce0-84bb-463a-b28f-e1d6df3c6b4a.png" alt="image-20240116212517161" style="zoom:50%;" />
+![image](resources/4e8e8ce0-84bb-463a-b28f-e1d6df3c6b4a.png)
 
 该位置编码表示相对位置的几何意义比较明显，也就是两个向量的角度差。
 
@@ -131,7 +131,7 @@ GQA（Grouped-Query Attention，来自于论文：GQA: Training Generalized Mult
 
 ## ChatGLM2的模型结构
 
-<img src="resources/bd665ecd-9391-4996-a45c-f8dad7e84822.png" alt="img" style="zoom:50%;" />
+![image](resources/bd665ecd-9391-4996-a45c-f8dad7e84822.png)
 
 ChatGLM2模型结构和Llama2的结构有一定相似之处，主要不同之处在于：
 

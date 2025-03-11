@@ -95,7 +95,7 @@
 
 LoRA是一个非常重要的可调优结构，简单来说，就是增加了一个额外可训练部分，比如原来的Linear的矩阵是MxN维，增加一个LoRA，该LoRA会包含两个参数量较少的矩阵：Mxd, dxN，这两个矩阵相乘后仍然是MxN维的，训练时原MxN矩阵冻结，只训练LoRA的两个矩阵，参数量就会大大减少。
 
-<img src="resources/image-20240116223558024.png" alt="image-20240116223558024" style="zoom:30%;" />
+![image](resources/image-20240116223558024.png)
 
 为什么模型本身的矩阵不使用这种形式？
 

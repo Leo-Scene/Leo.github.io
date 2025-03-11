@@ -32,7 +32,7 @@
 
 上面我们讲过，自回归模型的推理是将新的token不断填入序列生成下一个token的过程。那么，前面token已经生成的中间计算结果是可以直接利用的。具体以Attention结构来说：
 
-<img src="resources/image-20240116161847987.png" alt="image-20240116161847987" style="zoom:33%;" />
+![image](resources/image-20240116161847987.png)
 
 推理时的Q是单token tensor，但K和V都是包含了所有历史token tensor的长序列，因此KV是可以使用前序计算的中间结果的，这部分的缓存就是KVCache，其显存占用非常巨大。
 
