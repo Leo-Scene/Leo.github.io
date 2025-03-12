@@ -67,6 +67,8 @@ nav:
   # - 主页: index.md
   - 首页: index.md
   - Ai: 
+    - DeepSeek从入门到精通: src/ai/DeepSeek.md
+    - DeepSeek私有化部署和一体机: src/ai/DeepSeek私有化部署和一体机.md
     - 深度学习入门介绍: src/ai/A.深度学习入门介绍.md
     - 魔搭社区和LLM大模型基础知识: src/ai/B.魔搭社区和LLM大模型基础知识.md
     - 提示词工程: src/ai/C.提示词工程-prompt engineering.md
@@ -85,18 +87,19 @@ nav:
     - 训练一个古文翻译腔机器人: src/ai/P.PlayGround_训练一个古文翻译腔机器人.md
     - 看大模型的复杂推理能力: src/ai/Q.从 OpenAI-O1 看大模型的复杂推理能力.md
     - 10分钟改变大模型自我认知: src/ai/R.10分钟改变大模型自我认知.ipynb
+  
   - 软考:
-    - 项目的整合管理: src/01项目整合管理.md
-    - 项目的范围管理: src/02项目范围管理.md
-    - 项目的进度管理: src/03项目进度管理.md
-    - 项目的成本管理: src/04项目成本管理.md
-    - 项目的质量管理: src/05项目质量管理.md
-    - 项目的资源管理: src/06项目资源管理.md
-    - 项目的沟通管理: src/07项目沟通管理.md
-    - 项目的风险管理: src/08项目风险管理.md
-    - 项目的采购管理: src/09项目采购管理.md
-    - 项目的干系人管理: src/10项目干系人管理.md
-  - 标签: tag.md
+    - 项目的整合管理: src/pm/01项目整合管理.md
+    - 项目的范围管理: src/pm/02项目范围管理.md
+    - 项目的进度管理: src/pm/03项目进度管理.md
+    - 项目的成本管理: src/pm/04项目成本管理.md
+    - 项目的质量管理: src/pm/05项目质量管理.md
+    - 项目的资源管理: src/pm/06项目资源管理.md
+    - 项目的沟通管理: src/pm/07项目沟通管理.md
+    - 项目的风险管理: src/pm/08项目风险管理.md
+    - 项目的采购管理: src/pm/09项目采购管理.md
+    - 项目的干系人管理: src/pm/10项目干系人管理.md
+  - 分享: src/blog/share.md
   - 留言板: liuyanban.md
   - Blogger:
       - index: blog/index.md
